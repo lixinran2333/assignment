@@ -72,18 +72,4 @@ public class ApiControllers {
         }
         return sb.toString();
     }
-    public static Connection conn(){
-        try{
-            String driver = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql://localhost:3306/recordusers?useSSL=false&serverTimezone=UTC";
-            String username = "root";
-            String pass = "Lxr1994!";
-            Class.forName(driver);
-            Connection connect = DriverManager.getConnection(url, username, pass);
-
-            return connect;
-        }
-        catch(Exception e){System.out.println(e); return null;}
-
-    }
 }
